@@ -1,6 +1,6 @@
 
 body{
-    background-color: #00000046;
+    background-image: url(../../../../Downloads/diseño.png);
 }
 h1{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -19,8 +19,8 @@ h1{
         font: size 24px;
 
 }
-p{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+h2{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size:xx-large;
     
         /* Centrar horizontalmente */
@@ -29,11 +29,28 @@ p{
         
         /* Centrar verticalmente (si el contenedor tiene una altura fija) */
 
-    line-height: 200px; /* Ajusta según la altura de tu contenedor */
+    line-height: 100px; /* Ajusta según la altura de tu contenedor */
          /* Añadir sombra al texto */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4); /* Desplazamiento X, Y, difusa, color */
+    text-shadow: 2px 2px 5px rgb(56, 54, 54); /* Desplazamiento X, Y, difusa, color */
         /* Otros estilos opcionales */
         font: size 24px;
+
+}
+p{
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: xx-large;
+  
+      /* Centrar horizontalmente */
+
+  text-align: center;
+      
+      /* Centrar verticalmente (si el contenedor tiene una altura fija) */
+
+  line-height: 50px; /* Ajusta según la altura de tu contenedor */
+       /* Añadir sombra al texto */
+  text-shadow: 2px 2px 5px rgb(56, 54, 54); /* Desplazamiento X, Y, difusa, color */
+      /* Otros estilos opcionales */
+      font: size 20px;
 }
 
 * {
@@ -48,7 +65,7 @@ p{
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #fffefe; /* Fondo negro */
+    background-color: rgba(240, 248, 255, 0.719);
     padding: 15px 0;
     z-index: 1000;
     box-shadow: 0 4px 6px rgba(101, 156, 115, 0.596); /* Sombra suave */
@@ -90,7 +107,7 @@ p{
     left: 0;
     right: 0;
     bottom: 0;
-    border: 2px solid #8bcabd; /* Verde oscuro neón */
+    border: 2px solid #95c19f; /* Verde oscuro neón */
     border-radius: 4px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     z-index: -1; /* Asegurarse que el borde esté detrás del contenido */
@@ -103,7 +120,7 @@ p{
   
   .nav-item:hover::before {
     transform: scale(1.1); /* Aumenta el tamaño del borde en hover */
-    box-shadow: 0 0 10px 5px #35aa6a; /* Efecto neón */
+    box-shadow: 0 0 10px 5px #94e694; /* Efecto neón */
   }
   
   /* Efecto de sombra al hacer scroll */
@@ -122,6 +139,25 @@ p{
     animation: navbarAnimation 2s infinite alternate;
   }
 
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4a1;
+    margin: 0;
+}
+.mensaje {
+    background-color: #ffffffb2;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+    text-align: center;
+    color: #333;
+}
 
 footer{
     background-color: #080a0979;
