@@ -135,6 +135,25 @@
             color: #ff0000;
             margin-bottom: 1rem;
         }
+
+        #rostroForm {
+            margin-top: 2rem;
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+        }
+
+        #recomendaciones {
+            margin-top: 1rem;
+            font-weight: bold;
+        }
+
+        #cuidadoPiel {
+            margin-top: 2rem;
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+        }
     </style>
 </head>
 <body>
@@ -151,7 +170,7 @@
             <button onclick="mostrarInformacion()">Leer más</button>
         </section>
 
- <div class="grid">
+        <div class="grid">
             <div class="card" onclick="mostrarDetalle('nutricion')">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKLeVEorRCB55xRluFIJVx4oD6ExtYDv65Ag&s" alt="Nutrición">
                 <h3>Nutrición y Belleza</h3>
@@ -178,6 +197,31 @@
             <div id="pregunta"></div>
             <button onclick="verificarRespuesta()">Siguiente</button>
             <button onclick="verRespuestas()">Ver respuestas correctas</button>
+        </div>
+
+        <div id="rostroForm">
+            <h2>¿Cuál es tu tipo de rostro?</h2>
+            <select id="tipoRostro" name="tipoRostro">
+                <option value="ovalado">Ovalado</option>
+                <option value="cuadrado">Cuadrado</option>
+                <option value="redondo">Redondo</option>
+                <option value="corazon">Corazón</option>
+                <option value="alargado">Alargado</option>
+            </select>
+            <button onclick="obtenerRecomendaciones()">Obtener Recomendaciones</button>
+            <div id="recomendaciones"></div>
+        </div>
+
+        <div id="cuidadoPiel">
+            <h2>Cuidado de la Piel</h2>
+            <p>El cuidado de la piel es esencial para mantener su salud y apariencia. Aquí hay algunos consejos:</p>
+            <ul>
+                <li>Hidrata tu piel diariamente con cremas adecuadas a tu tipo de piel.</li>
+                <li>Usa protector solar para protegerte de los daños del sol.</li>
+                <li>Exfolia tu piel una vez a la semana para eliminar células muertas.</li>
+                <li>Consume alimentos ricos en antioxidantes, como frutas y verduras.</li>
+                <li>Bebe suficiente agua para mantener tu piel hidratada desde adentro.</li>
+            </ul>
         </div>
     </div>
 
@@ -236,7 +280,7 @@
                 html += `
                     <button onclick="responder(true)">Verdadero</button>
                     <button onclick="responder(false)">Falso</button>
-                `;
+ `;
             } else {
                 html += `<input type="number" id="respuesta">`;
             }
@@ -273,7 +317,7 @@
             preguntaActual++;
             
             if (preguntaActual < preguntas.length) {
-                mostrarPregunta ();
+                mostrarPregunta();
             } else {
                 mostrarResultado();
             }
@@ -362,9 +406,22 @@
             document.getElementById('modal').style.display = 'none';
         }
 
-        // Iniciar el quiz al cargar la página
-        iniciarTemporizador();
-        mostrarPregunta();
-    </script>
+        function obtenerRecomendaciones() {
+            const tipoRostro = document.getElementById('tipoRostro').value;
+            let recomendaciones = '';
+            
+            switch(tipoRostro) {
+                case 'ovalado':
+                    recomendaciones = 'Cortes en capas, flequillos suaves.';
+                    break;
+                case 'cuadrado':
+                    recomendaciones = 'Cortes con textura, estilos asimétricos.';
+                    break;
+                case 'redondo':
+                    recomendaciones = 'Cortes largos, capas que alarguen el rostro.';
+                    break;
+            }}
+       
+</script>
 </body>
 </html>
