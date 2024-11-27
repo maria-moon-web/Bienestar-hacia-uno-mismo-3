@@ -1,6 +1,6 @@
-document.getElementById('registroForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
+document.getElementById('login').addEventListener('submit', function(e) {
+    e.preventDefault(); // Evita el envío del formulario si se realizan validaciones
+
     const nombre = document.getElementById('nombre').value;
     const apellido = document.getElementById('apellido').value;
     const email = document.getElementById('email').value;
@@ -8,18 +8,10 @@ document.getElementById('registroForm').addEventListener('submit', function(e) {
 
     if (nombre && apellido && email && password) {
         alert('Registro exitoso!');
-        this.reset();
+        // Aquí podrías redirigir o hacer alguna otra acción
+        // Por ejemplo:
+        // window.location.href = "Contenidos/contenido.html";
     } else {
         alert('Por favor, complete todos los campos.');
     }
-});
-
-const inputs = document.querySelectorAll('input');
-inputs.forEach(input => {
-    input.addEventListener('focus', function() {
-        this.style.transform = 'scale(1.01)';
-    });
-    input.addEventListener('blur', function() {
-        this.style.transform = 'scale(1)';
-    });
 });
